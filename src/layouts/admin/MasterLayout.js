@@ -23,24 +23,10 @@ const MasterLayout = () => {
                 <div id="layoutSidenav_content">
                     <main>
                         <Routes>
-                            {routes.map((route, idx) => {
-                                return (
-                                    route.component && (
-                                        <Route 
-                                            key={idx}
-                                            path={route.path}
-                                            exact={route.exact}
-                                            name={route.name}
-                                            render={(props) => (
-                                                <route.component {...props} />
-                                            )}
-                                        />
-                                    )
-                                )
-                            })}
                             <Route path="/admin" element={<Navigate to="/admin/dashboard" />}/>
-                            
                         </Routes>
+                        
+                        <h1>This is master page</h1>
 
                     </main>
 
