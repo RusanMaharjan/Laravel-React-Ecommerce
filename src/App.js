@@ -9,6 +9,8 @@ import AdminPrivateRoute from './AdminPrivateRoute';
 
 import MasterLayout from "./layouts/admin/MasterLayout";
 import axios from 'axios';
+import Page403 from "./components/errors/Page403";
+import Page404 from "./components/errors/Page404";
 
 axios.defaults.baseURL = "http://localhost:8000/";
 axios.defaults.headers.post['Content-Type'] = 'application/json';
@@ -32,7 +34,12 @@ function App() {
           <Route path="/admin/dashboard" name="Dashboard" element={<Dashboard/>}/>
           <Route path="/admin/profile" name="Profile" element={<Profile/>}/>
           
-          {/* <Route path="/admin" name="Admin" render={(props) => <MasterLayout {...props}/>}/> */}
+
+          {/* error pages */}
+          <Route path="/403" element={<Page403/>}/>
+          <Route path="/404" element={<Page404/>}/>
+
+
 
 
           {/* auth routes */}
