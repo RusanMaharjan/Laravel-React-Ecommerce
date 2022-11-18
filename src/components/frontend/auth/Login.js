@@ -34,7 +34,11 @@ function Login() {
                     localStorage.setItem('auth_token', res.data.token);
                     localStorage.setItem('auth_name', res.data.username);
                     swal("Success", res.data.message, "success");
-                    history('/');
+                    if(res.data.role === 'admin') {
+                        history('/admin/dashboard');
+                    } else {
+                        history('/');
+                    }
                 } else if(res.data.status === 401) {
                     swal("Warning", res.data.message, "warning");
                 } else {
