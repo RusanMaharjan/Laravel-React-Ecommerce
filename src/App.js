@@ -32,6 +32,7 @@ function App() {
           <Route path="/admin/dashboard" name="Dashboard" element={<Dashboard/>}/>
           <Route path="/admin/profile" name="Profile" element={<Profile/>}/>
           
+          {/* <Route path="/admin" name="Admin" render={(props) => <MasterLayout {...props}/>}/> */}
 
 
           {/* auth routes */}

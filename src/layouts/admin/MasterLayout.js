@@ -24,6 +24,22 @@ const MasterLayout = () => {
                     <main>
                         <Routes>
                             <Route path="/admin" element={<Navigate to="/admin/dashboard" />}/>
+                            {/* {routes.map((route, idx) => {
+                                return (
+                                    route.element && (
+                                        <Route 
+                                            key={idx}
+                                            path={route.path}
+                                            exact={route.exact}
+                                            name={route.name}
+                                            render={(props) => (
+                                                <route.element {...props} />
+                                            )}
+                                        />
+                                    )
+                                )
+                            })}
+                            <Navigate from="/admin" to="/admin/dashboard" /> */}
                         </Routes>
                         
                         <h1>This is master page</h1>
