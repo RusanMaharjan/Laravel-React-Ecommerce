@@ -11,6 +11,7 @@ import MasterLayout from "./layouts/admin/MasterLayout";
 import axios from 'axios';
 import Page403 from "./components/errors/Page403";
 import Page404 from "./components/errors/Page404";
+import Category from "./components/admin/Category";
 
 axios.defaults.baseURL = "http://localhost:8000/";
 axios.defaults.headers.post['Content-Type'] = 'application/json';
@@ -33,6 +34,7 @@ function App() {
           <Route path="/admin" name="Admin" element={<MasterLayout/>}/>
           <Route path="/admin/dashboard" name="Dashboard" element={<Dashboard/>}/>
           <Route path="/admin/profile" name="Profile" element={<Profile/>}/>
+          <Route path="/admin/add-category" name="Category" element={<Category/>}/>
           
 
           {/* error pages */}
